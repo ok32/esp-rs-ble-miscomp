@@ -1,0 +1,13 @@
+diff --git a/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c b/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c
+index a651b54284..5e5af02f91 100644
+--- a/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c
++++ b/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c
+@@ -1299,6 +1299,8 @@ int bt_mesh_gatts_service_start(struct bt_mesh_gatt_service *svc)
+         uuid = BLE_UUID16_DECLARE(BT_UUID_MESH_PROXY_VAL);
+     } else {
+         uuid = BLE_UUID16_DECLARE(BT_UUID_MESH_PROV_VAL);
++        // just add this line and it works:
++        BT_ERR("(bt_mesh_gatts_service_start:else) abcabcabca");
+     }
+ 
+     rc = ble_gatts_find_svc(uuid, &handle);

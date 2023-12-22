@@ -1,0 +1,158 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40378c77
+0x40378c77 - npl_freertos_eventq_put
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/host/nimble/nimble/porting/npl/freertos/src/npl_os_freertos.c:298
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x3fce3818,len:0x16f8
+0x3fce3818 - _nimble_common_end
+    at ??:??
+load:0x403c9700,len:0x4
+0x403c9700 - _iram_end
+    at ??:??
+load:0x403c9704,len:0xc00
+0x403c9704 - _iram_end
+    at ??:??
+load:0x403cc700,len:0x2eb0
+0x403cc700 - _iram_end
+    at ??:??
+SHA-256 comparison failed:
+Calculated: 9e7b8c8d53c0514c12b6eb2f4d48f985182d9c70a488ad4caf71e08902c97372
+Expected: 3499e4149a363c2b1ee4ee9709ca5031f50ee6b595a532f697c8659516763ae3
+Attempting to boot anyway...
+entry 0x403c9908
+0x403c9908 - _iram_end
+    at ??:??
+I (45) boot: ESP-IDF v5.1-beta1-378-gea5e0ff298-dirt 2nd stage bootloader
+I (46) boot: compile time Jun  7 2023 08:07:32
+I (47) boot: Multicore bootloader
+I (51) boot: chip revision: v0.1
+I (55) boot.esp32s3: Boot SPI Speed : 40MHz
+I (59) boot.esp32s3: SPI Mode       : DIO
+I (64) boot.esp32s3: SPI Flash Size : 16MB
+I (69) boot: Enabling RNG early entropy source...
+I (74) boot: Partition Table:
+I (78) boot: ## Label            Usage          Type ST Offset   Length
+I (85) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (93) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (100) boot:  2 factory          factory app      00 00 00010000 00fa0000
+I (108) boot: End of partition table
+I (112) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2c964h (182628) map
+I (166) esp_image: segment 1: paddr=0003c98c vaddr=3fc96e00 size=0368ch ( 13964) load
+I (170) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=90754h (591700) map
+I (319) esp_image: segment 3: paddr=000d077c vaddr=3fc9a48c size=00ba8h (  2984) load
+I (320) esp_image: segment 4: paddr=000d132c vaddr=40374000 size=12d78h ( 77176) load
+I (355) boot: Loaded app from partition at offset 0x10000
+I (355) boot: Disabling RNG early entropy source...
+I (366) cpu_start: Multicore app
+I (367) cpu_start: Pro cpu up.
+I (367) cpu_start: Starting app cpu, entry point is 0x403762c8
+0x403762c8 - call_start_cpu1
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/esp_system/port/cpu_start.c:154
+I (0) cpu_start: App cpu up.
+I (385) cpu_start: Pro cpu start user code
+I (385) cpu_start: cpu freq: 160000000 Hz
+I (385) cpu_start: Application information:
+I (388) cpu_start: Project name:     libespidf
+I (393) cpu_start: App version:      1
+I (398) cpu_start: Compile time:     Dec 21 2023 19:49:48
+I (404) cpu_start: ELF file SHA256:  0000000000000000...
+I (410) cpu_start: ESP-IDF:          v5.1.1
+I (415) cpu_start: Min chip rev:     v0.0
+I (419) cpu_start: Max chip rev:     v0.99
+I (424) cpu_start: Chip rev:         v0.1
+I (429) heap_init: Initializing. RAM available for dynamic allocation:
+I (436) heap_init: At 3FC9EF20 len 0004A7F0 (297 KiB): DRAM
+I (442) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (449) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (455) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (463) spi_flash: detected chip: gd
+I (466) spi_flash: flash io: dio
+W (470) rmt(legacy): legacy driver is deprecated, please migrate to `driver/rmt_tx.h` and/or `driver/rmt_rx.h`
+W (480) pcnt(legacy): legacy driver is deprecated, please migrate to `driver/pulse_cnt.h`
+W (489) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`
+I (498) sleep: Configure to isolate all GPIO pins in sleep state
+I (505) sleep: Enable automatic switching of GPIO sleep configuration
+I (512) coexist: coex firmware version: 80b0d89
+I (517) coexist: coexist rom version e7ae62f
+I (522) app_start: Starting scheduler on CPU0
+I (527) app_start: Starting scheduler on CPU1
+I (527) main_task: Started on CPU0
+I (537) main_task: Calling app_main()
+I (537) miscomp: Hello, world!
+I (557) BLE_INIT: BT controller compile version [963cad4]
+I (557) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12
+I (597) BLE_INIT: Bluetooth MAC: 7c:df:a1:fd:c4:92
+
+I (597) miscomp: BLE Host Task Started
+I (607) NimBLE: GAP procedure initiated: stop advertising.
+
+I (607) NimBLE: Failed to restore IRKs from store; status=8
+
+I (607) miscomp: Device Address: 7C:DF:A1:FD:C4:92
+I (617) miscomp: esp_ble_mesh_init
+I (677) miscomp: PROVISION EVENT: 0; param: 0x3fcb77a0
+0x3fcb77a0 - _nimble_common_end
+    at ??:??
+I (677) miscomp: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0
+I (677) miscomp: esp_ble_mesh_node_prov_enable
+I (677) NimBLE: GAP procedure initiated: discovery;
+I (687) NimBLE: own_addr_type=0 filter_policy=0 passive=1 limited=0 filter_duplicates=0
+I (697) NimBLE: duration=forever
+I (697) NimBLE:
+
+I (707) NimBLE: GAP procedure initiated: advertise;
+I (707) NimBLE: disc_mode=0
+I (707) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=32 adv_itvl_max=32
+I (717) NimBLE:
+
+
+assert failed: bt_mesh_gatts_service_start mesh_bearer_adapt.c:1304 (rc == 0)
+
+
+Backtrace: 0x40376d5e:0x3fcb5620 0x4037f941:0x3fcb5640 0x40384f35:0x3fcb5660 0x42049f5e:0x3fcb5780 0x4203df3a:0x3fcb57b0 0x4203ab50:0x3fcb57d0 0x4204be53:0x3fcb5800 0x4204a201:0x3fcb5860 0x4204a89f:0x3fcb5880
+0x40376d5e - panic_abort
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/esp_system/panic.c:452
+0x3fcb5620 - _nimble_common_end
+    at ??:??
+0x4037f941 - esp_system_abort
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/esp_system/port/esp_system_chip.c:84
+0x3fcb5640 - _nimble_common_end
+    at ??:??
+0x40384f35 - __assert_func
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/newlib/assert.c:81
+0x3fcb5660 - _nimble_common_end
+    at ??:??
+0x42049f5e - bt_mesh_gatts_service_start
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c:1304
+0x3fcb5780 - _nimble_common_end
+    at ??:??
+0x4203df3a - bt_mesh_proxy_server_prov_enable
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/esp_ble_mesh/mesh_core/proxy_server.c:754
+0x3fcb57b0 - _nimble_common_end
+    at ??:??
+0x4203ab50 - bt_mesh_prov_enable
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/esp_ble_mesh/mesh_core/main.c:248
+0x3fcb57d0 - _nimble_common_end
+    at ??:??
+0x4204be53 - btc_ble_mesh_prov_call_handler
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/esp_ble_mesh/btc/btc_ble_mesh_prov.c:1821
+0x3fcb5800 - _nimble_common_end
+    at ??:??
+0x4204a201 - btc_thread_handler
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/common/btc/core/btc_task.c:207
+0x3fcb5860 - _nimble_common_end
+    at ??:??
+0x4204a89f - osi_thread_run
+    at /home/esp/miscomp/.embuild/espressif/esp-idf/v5.1.1/components/bt/common/osi/thread.c:165
+0x3fcb5880 - _nimble_common_end
+    at ??:??
+
+
+
+
+ELF file SHA256: 0000000000000000
+
+Rebooting...
